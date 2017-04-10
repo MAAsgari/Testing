@@ -23,7 +23,7 @@ describe('WelcomedependencyComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [WelcomedependencyComponent],
-      providers: [{ provide: UserService, useValue: userServiceStub }]
+      providers: [{ provide: UserService, useValue: userServiceStub }]//Use Fake Data
     });
 
     fixture = TestBed.createComponent(WelcomedependencyComponent);

@@ -1,15 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './../services/userservice.service';
+import { UserModel } from './../models/userModel';
 
 @Component({
-  selector: 'app-twain-component-async',
-  templateUrl: './twain-component-async.component.html',
-  styleUrls: ['./twain-component-async.component.css']
+  selector: 'twain-quote',
+  template: '<p class="twain"><i>{{quote}}</i></p>',
+  providers: [UserService]
+
 })
 export class TwainComponentAsyncComponent implements OnInit {
 
-  constructor() { }
+  intervalId: number;
+  users: UserModel[];
+  quote: string = "...";
+  constructor(private userService: UserService) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    this.userService.getquote().then(quote => this.quote = quote);
   }
 
 }
