@@ -8,6 +8,8 @@ import { BannerComponent } from './banner-inline/banner-inline.component';
 import { BannertemplateComponent } from './bannertemplate/bannertemplate.component';
 import { WelcomedependencyComponent } from './welcomedependency/welcomedependency.component';
 import { TwainComponentAsyncComponent } from './twain-component-async/twain-component-async.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { TwainComponentAsyncComponent } from './twain-component-async/twain-comp
     BannerComponent,
     BannertemplateComponent,
     WelcomedependencyComponent,
-    TwainComponentAsyncComponent
+    TwainComponentAsyncComponent,
+    HighlightDirective,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
